@@ -16,7 +16,6 @@ dateElement.innerHTML = ` Last updated:${day}, ${hours}: ${minutes}`;
 //Forecast API code - need coordinates first and API url // get coordinates from API - response from Api - gives back coordinates , get corrdinates from api
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let describeElement = document.querySelector("#descript");
@@ -38,6 +37,15 @@ function displayTemperature(response) {
   celsiusTemp = response.data.main.temp;
   //forecast api
   //send coordinates to this function - displays info
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "a81ad5e4475c2b1dbce4aaa38b89d9cb";
+  let apiForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  console.log(apiForecast);
+  axios.get(apiForecast).then(displayForecast);
 }
 
 function search(city) {
@@ -81,26 +89,39 @@ fahrenLink.addEventListener("click", displayFahrenTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
+function convertDay(dates) {
+  let date = new Date(dates * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[day];
+}
 //Java for forecast loop
-function displayForecast() {
+function displayForecast(response) {
+  let forecastDaily = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class = "row">`;
-  let days = ["Mon", "Tues", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `   
+  forecastDaily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `   
          <div class = "col-2">
-  <div class = "Mon-forecast"> ${day}  </div>
+  <div class = "Mon-forecast"> ${convertDay(day.dt)}  </div>
     <div>
- <img src = "https://openweathermap.org/img/wn/50d@2x.png" alt = "cloudy" class = "weather-cloudy-icon" width ="45px" /> </div>
-   <span class = "Max-temp"> 85
-   &deg; </span><span class = "Min-temp"> 65&deg;</span>
+ <img src = 'https://openweathermap.org/img/wn/${
+   day.weather[0].icon
+ }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="45px" /> </div>
+   <span class = "Max-temp"> ${Math.round(
+     day.temp.max
+   )} &deg; </span><span class = "Min-temp"> ${Math.round(
+          day.temp.min
+        )} &deg;</span>
   </div> 
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
