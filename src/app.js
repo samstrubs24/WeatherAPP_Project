@@ -1,5 +1,8 @@
+//changing background image based on time of day
 let date = new Date();
 let hours = date.getHours();
+let hour = date.getHours();
+let hourTime = date.getHours();
 
 if (hours < 10) {
   hours = `0${hours}`;
@@ -9,10 +12,21 @@ let minutes = date.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+
+if (hours > 12) {
+  hour = hours - 12;
+  hourTime = "PM";
+  document.getElementById("background").src =
+    "https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg";
+} else {
+  hourTime = "AM";
+  document.getElementById("background").src =
+    "https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg";
+}
 let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let day = days[date.getDay()];
 let dateElement = document.querySelector("#update");
-dateElement.innerHTML = ` Last updated:${day}, ${hours}: ${minutes}`;
+dateElement.innerHTML = ` Last updated:${day}, ${hour}: ${minutes} ${hourTime}`;
 //Forecast API code - need coordinates first and API url // get coordinates from API - response from Api - gives back coordinates , get corrdinates from api
 
 function displayTemperature(response) {
@@ -125,3 +139,5 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+//bonus - current location button

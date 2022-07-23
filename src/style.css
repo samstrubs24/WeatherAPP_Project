@@ -57,6 +57,7 @@ li {
   color: black;
   position: relative;
   bottom: -25px;
+  left: 25px;
   font-size: 13px;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
@@ -131,7 +132,7 @@ small {
 }
 
 .container {
-  background-image: url(https://img.freepik.com/free-photo/beautiful-view-blue-sky-with-clouds-beautiful-shapes-partly-cloudy-colorful-sunset-natural-sky-background-texture-beautiful-color-bright-landscape-blue-sky-selective-focus_479694-52.jpg);
+  background-image: url(https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg);
   background-position: cover;
   background-repeat: no-repeat;
   background-position: center;
