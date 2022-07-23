@@ -1,0 +1,131 @@
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: Roboto, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28.8px;
+}
+.todays-weather {
+  margin-top: -10px;
+  padding-top: 0;
+  margin-left: -30px;
+  color: grey;
+  font-size: 15px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+.today-weather {
+  margin-left: -30px;
+  margin-top: -8px;
+  color: grey;
+  font-size: 15px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+.first-icon {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+}
+.temp {
+  font-size: 64px;
+  position: relative;
+  right: 20px;
+  bottom: -10px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+  font-weight: 100;
+}
+.degrees {
+  position: relative;
+  right: 25px;
+  bottom: 27px;
+  font-size: 14px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+.description {
+  color: grey;
+  position: relative;
+  bottom: -25px;
+  font-size: 13px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+.overview {
+  margin-bottom: 20px;
+}
+
+.celsius {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.celsius:hover {
+  text-decoration: none;
+}
+
+small {
+  position: relative;
+  left: -20px;
+  bottom: -45px;
+}
+
+.weather-forecast {
+  text-align: center;
+  position: relative;
+  bottom: -20px;
+}
+
+.Mon-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Tues-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Wed-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Thurs-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Fri-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Sat-forecast {
+  font-size: 14px;
+  color: rgb(186, 186, 186);
+}
+
+.Sun-forecast {
+  font-size: 14px;
+  color: #bababa;
+}
+
+.Min-temp {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.Max-temp {
+  font-size: 12px;
+}
