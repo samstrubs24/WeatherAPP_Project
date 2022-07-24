@@ -132,8 +132,8 @@ small {
 }
 
 .container {
-  background-image: url(https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg);
-  background-position: cover;
+  background-color: white;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
