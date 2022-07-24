@@ -4,6 +4,8 @@
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+  background-image: url("https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg");
+  background-size: cover;
 }
 
 h1 {
@@ -129,11 +131,4 @@ small {
 
 .Max-temp {
   font-size: 12px;
-}
-
-.container {
-  background-color: white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }

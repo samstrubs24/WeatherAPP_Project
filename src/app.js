@@ -16,12 +16,8 @@ if (minutes < 10) {
 if (hours > 12) {
   hour = hours - 12;
   hourTime = "PM";
-  document.getElementById("background").src =
-    "https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg";
 } else {
   hourTime = "AM";
-  document.getElementById("background").src =
-    "https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg";
 }
 let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let day = days[date.getDay()];
