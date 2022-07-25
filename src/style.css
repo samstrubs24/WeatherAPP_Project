@@ -36,33 +36,39 @@ li {
 }
 .first-icon {
   position: relative;
-  bottom: 10px;
-  right: 10px;
-  width: 60px;
-  height: 60px;
+  bottom: 170px;
+  left: 343px;
+  width: 70px;
+  height: 70px;
 }
 .temp {
-  font-size: 64px;
+  font-size: 95px;
   position: relative;
-  right: 20px;
-  bottom: -10px;
+  left: 345px;
+  bottom: 140px;
   font-family: Google Sans, Roboto, arial, sans-serif;
   font-weight: 100;
 }
 .degrees {
   position: relative;
-  right: 25px;
-  bottom: 27px;
+  left: 326px;
+  bottom: 210px;
   font-size: 14px;
   color: white;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
-.description {
-  color: black;
-  position: relative;
-  bottom: -25px;
-  left: 25px;
-  font-size: 13px;
+.humidity {
+  margin-left: -30px;
+  margin-top: -8px;
+  color: white;
+  font-size: 15px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+.wind {
+  margin-left: -30px;
+  margin-top: -8px;
+  color: white;
+  font-size: 15px;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
 .overview {
@@ -88,7 +94,7 @@ small {
 .weather-forecast {
   text-align: center;
   position: relative;
-  bottom: -75px;
+  bottom: 64px;
 }
 .Mon-forecast {
   font-size: 14px;
