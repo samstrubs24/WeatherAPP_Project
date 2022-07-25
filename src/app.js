@@ -23,6 +23,7 @@ if (hours > 12) {
   document.getElementById("humidity").style.color = "#FFFFFF";
   document.getElementById("wind").style.color = "#FFFFFF";
   document.getElementById("celsius").style.color = "#FFFFFF";
+  document.getElementById("fahren").style.color = "0000FF";
   document.getElementById("forecast").style.color = "#FFFFFF";
 } else {
   hourTime = "AM";

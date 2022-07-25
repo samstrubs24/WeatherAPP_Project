@@ -1,10 +1,10 @@
 .weather-app {
   max-width: 600px;
-  height: 718px;
+  height: 700px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 10px;
+  border-radius: 25px;
   background-image: url("https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg");
   background-size: cover;
 }
@@ -54,6 +54,7 @@ li {
   right: 25px;
   bottom: 27px;
   font-size: 14px;
+  color: white;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
 .description {
@@ -87,7 +88,7 @@ small {
 .weather-forecast {
   text-align: center;
   position: relative;
-  bottom: -66px;
+  bottom: -75px;
 }
 .Mon-forecast {
   font-size: 14px;
