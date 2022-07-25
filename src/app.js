@@ -175,7 +175,7 @@ function changeToCity(response) {
   tempEl.innerHTML = Math.round(response.data.main.temp);
   getForecastCurrentLoc(response.data.coord);
 }
-//issue was happenign ebcsue page would load before got latitude and try to run api without lat/lon
+//issue was happening because page would load before got latitude and try to run api without lat/lon
 function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
