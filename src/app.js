@@ -13,9 +13,14 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-if (hours > 12) {
-  hour = hours - 12;
+if (hours >= 12) {
+  hour = hours % 12;
   hourTime = "PM";
+} else {
+  hourTime = "AM";
+}
+
+if (hours >= 16) {
   document.getElementById("background").style.backgroundImage =
     "url(https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg)";
   document.getElementById("temp").style.color = "#FFFFFF";
@@ -26,14 +31,14 @@ if (hours > 12) {
   document.getElementById("fahren").style.color = "0000FF";
   document.getElementById("forecast").style.color = "#FFFFFF";
 } else {
-  hourTime = "AM";
   document.getElementById("background").style.backgroundImage =
     "url(https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg)";
 }
+
 let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 let day = days[date.getDay()];
 let dateElement = document.querySelector("#update");
-dateElement.innerHTML = ` Last updated:${day}, ${hour}: ${minutes} ${hourTime}`;
+dateElement.innerHTML = ` Last updated:${day}, ${hour}: ${minutes} ${hourTime} `;
 //Forecast API code - need coordinates first and API url // get coordinates from API - response from Api - gives back coordinates , get corrdinates from api
 
 function displayTemperature(response) {
@@ -57,7 +62,7 @@ function displayTemperature(response) {
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemp = response.data.main.temp;
   //forecast api
-  //send coordinates to this function - displays info
+  //gets response from api what coordinates from the city that is searched
   getForecast(response.data.coord);
 }
 
@@ -135,7 +140,7 @@ function displayForecast(response) {
     <div>
  <img src = 'https://openweathermap.org/img/wn/${
    day.weather[0].icon
- }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="45px" /> </div>
+ }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="65px" /> </div>
    <span class = "Max-temp"> ${Math.round(
      day.temp.max
    )} &deg; </span><span class = "Min-temp"> ${Math.round(
@@ -174,7 +179,7 @@ function changeToCity(response) {
   descriptTown.innerHTML = response.data.weather[0].main;
   let tempEl = document.querySelector("#temp");
   tempEl.innerHTML = Math.round(response.data.main.temp);
-  getForecastCurrentLoc(response.data.coord);
+  getForecastCurrentLoc(response.data.coord); //gets info from current location and sends it to function so api knows the coordinates
 }
 //issue was happening because page would load before got latitude and try to run api without lat/lon
 function getCurrentPosition(event) {
@@ -217,7 +222,7 @@ function displayForecastLocal(response) {
     <div>
  <img src = 'https://openweathermap.org/img/wn/${
    day.weather[0].icon
- }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="45px" /> </div>
+ }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="65px" /> </div>
    <span class = "Max-temp"> ${Math.round(
      day.temp.max
    )} &deg; </span><span class = "Min-temp"> ${Math.round(

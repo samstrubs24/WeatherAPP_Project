@@ -5,7 +5,6 @@
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 25px;
-  background-image: url("https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg");
   background-size: cover;
 }
 
@@ -35,26 +34,18 @@ li {
   list-style-type: none;
 }
 .first-icon {
-  position: relative;
-  bottom: 170px;
-  left: 343px;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 50px;
 }
 .temp {
   font-size: 95px;
-  position: relative;
-  left: 335px;
-  bottom: 140px;
   font-family: Google Sans, Roboto, arial, sans-serif;
   font-weight: 100;
 }
 .degrees {
-  position: relative;
-  left: 326px;
-  bottom: 210px;
   font-size: 14px;
-  color: black;
+  color: white;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
 .humidity {
@@ -88,16 +79,14 @@ li {
 small {
   position: relative;
   left: -20px;
-  bottom: -375px;
+  bottom: -450px;
 }
 
 .weather-forecast {
   text-align: center;
-  position: relative;
-  bottom: 64px;
 }
 .Mon-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: white;
 }
 
@@ -133,11 +122,33 @@ small {
 
 .Min-temp {
   opacity: 0.6;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .Max-temp {
-  font-size: 12px;
+  font-size: 16px;
+}
+.btn-logic {
+  background-color: lightgrey;
+  border-radius: 3px;
+  height: 30px;
+  border: 0;
+}
+
+.btn-logic:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  border: 0;
+}
+
+.button:hover {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 1px;
+  height: 30px;
+  border: 0;
 }
 .btn-logic {
   background-color: lightgrey;
