@@ -47,6 +47,8 @@ li {
   font-size: 14px;
   color: white;
   font-family: Google Sans, Roboto, arial, sans-serif;
+  position: relative;
+  top: -60px;
 }
 .humidity {
   margin-left: -30px;
@@ -91,27 +93,27 @@ small {
 }
 
 .Tues-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: white;
 }
 
 .Wed-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(186, 186, 186);
 }
 
 .Thurs-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(186, 186, 186);
 }
 
 .Fri-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(186, 186, 186);
 }
 
 .Sat-forecast {
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(186, 186, 186);
 }
 
@@ -171,4 +173,8 @@ small {
   border-radius: 1px;
   height: 30px;
   border: 0;
+}
+
+.col-6 {
+  margin-bottom: -65px;
 }
