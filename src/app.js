@@ -13,11 +13,11 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-if (hours >= 12) {
+if (hours < 12) {
   hour = hours % 12;
-  hourTime = "PM";
-} else {
   hourTime = "AM";
+} else {
+  hourTime = "PM";
 }
 
 if (hours >= 18) {

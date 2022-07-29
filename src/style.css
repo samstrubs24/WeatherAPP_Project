@@ -78,12 +78,6 @@ li {
   text-decoration: none;
 }
 
-small {
-  position: relative;
-  left: -20px;
-  bottom: -450px;
-}
-
 .weather-forecast {
   text-align: center;
 }
