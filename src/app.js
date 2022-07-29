@@ -20,7 +20,7 @@ if (hours < 12) {
   hourTime = "PM";
 }
 
-if (hours >= 18) {
+if (hours >= 20) {
   document.getElementById("background").style.backgroundImage =
     "url(https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg)";
   document.getElementById("temp").style.color = "#FFFFFF";
