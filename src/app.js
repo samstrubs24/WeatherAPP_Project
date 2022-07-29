@@ -20,7 +20,7 @@ if (hours >= 12) {
   hourTime = "AM";
 }
 
-if (hours >= 16) {
+if (hours >= 18) {
   document.getElementById("background").style.backgroundImage =
     "url(https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg)";
   document.getElementById("temp").style.color = "#FFFFFF";
@@ -53,7 +53,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = `Humidity:${hum}%`;
   let windElement = document.querySelector("#wind");
   let wind = Math.round(response.data.wind.speed);
-  windElement.innerHTML = `Wind Speed: ${wind} mph`;
+  windElement.innerHTML = `Wind: ${wind} mph`;
   let weatherIconElement = document.querySelector("#img1");
   weatherIconElement.setAttribute(
     "src",
@@ -174,7 +174,7 @@ function changeToCity(response) {
   let humTown = document.querySelector("#humidity");
   humTown.innerHTML = `Humidity: ${response.data.main.humidity}`;
   let windTown = document.querySelector("#wind");
-  windTown.innerHTML = `wind: ${Math.round(response.data.wind.speed)} mph`;
+  windTown.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
   let descriptTown = document.querySelector("#descript");
   descriptTown.innerHTML = response.data.weather[0].main;
   let tempEl = document.querySelector("#temp");

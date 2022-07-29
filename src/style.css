@@ -175,6 +175,7 @@ small {
   border: 0;
 }
 
-.col-6 {
-  margin-bottom: -65px;
+.footer {
+  max-width: 600px;
+  margin: 0 auto;
 }
