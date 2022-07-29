@@ -22,7 +22,7 @@ if (hours < 12) {
 
 if (hours >= 20) {
   document.getElementById("background").style.backgroundImage =
-    "url(https://i.pinimg.com/564x/9b/78/c7/9b78c76ad7fd0392588fef31a6e7650e.jpg)";
+    "url(https://giffiles.alphacoders.com/194/19493.gif)";
   document.getElementById("temp").style.color = "#FFFFFF";
   document.getElementById("city").style.color = "#FFFFFF";
   document.getElementById("humidity").style.color = "#FFFFFF";
@@ -32,7 +32,15 @@ if (hours >= 20) {
   document.getElementById("forecast").style.color = "#FFFFFF";
 } else {
   document.getElementById("background").style.backgroundImage =
-    "url(https://i.pinimg.com/564x/a8/59/50/a8595064067a8567d05c283e90c23968.jpg)";
+    "url(https://c.tenor.com/gznLWsJjaMAAAAAC/daytime-miving.gif)";
+  document.getElementById("forecast").style.color = "#000000";
+  document.getElementById("temp").style.color = "#000000";
+  document.getElementById("city").style.color = "#000000";
+  document.getElementById("humidity").style.color = "#000000";
+  document.getElementById("wind").style.color = "#000000";
+  document.getElementById("celsius").style.color = "#000000";
+  document.getElementById("fahren").style.color = "#000000";
+  document.getElementById("update").style.color = "#000000";
 }
 
 let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
@@ -140,7 +148,7 @@ function displayForecast(response) {
     <div>
  <img src = 'https://openweathermap.org/img/wn/${
    day.weather[0].icon
- }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="65px" /> </div>
+ }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="75px" /> </div>
    <span class = "Max-temp"> ${Math.round(
      day.temp.max
    )} &deg; </span><span class = "Min-temp"> ${Math.round(
@@ -222,7 +230,7 @@ function displayForecastLocal(response) {
     <div>
  <img src = 'https://openweathermap.org/img/wn/${
    day.weather[0].icon
- }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="65px" /> </div>
+ }.png' alt = "cloudy" class = "weather-cloudy-icon" width ="75px" /> </div>
    <span class = "Max-temp"> ${Math.round(
      day.temp.max
    )} &deg; </span><span class = "Min-temp"> ${Math.round(

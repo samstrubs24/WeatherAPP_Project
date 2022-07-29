@@ -6,6 +6,7 @@
   border: 1px solid #dadde1;
   border-radius: 25px;
   background-size: cover;
+  opacity: 0.8;
 }
 
 h1 {
@@ -34,8 +35,8 @@ li {
   list-style-type: none;
 }
 .first-icon {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   margin-bottom: 50px;
 }
 .temp {
@@ -83,37 +84,37 @@ li {
 }
 .Mon-forecast {
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .Tues-forecast {
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .Wed-forecast {
   font-size: 18px;
-  color: rgb(186, 186, 186);
+  color: black;
 }
 
 .Thurs-forecast {
   font-size: 18px;
-  color: rgb(186, 186, 186);
+  color: black;
 }
 
 .Fri-forecast {
   font-size: 18px;
-  color: rgb(186, 186, 186);
+  color: black;
 }
 
 .Sat-forecast {
   font-size: 18px;
-  color: rgb(186, 186, 186);
+  color: black;
 }
 
 .Sun-forecast {
   font-size: 14px;
-  color: #bababa;
+  color: black;
 }
 
 .Min-temp {
